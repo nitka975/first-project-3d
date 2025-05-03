@@ -1,8 +1,9 @@
-import React from "react";
+// import React from "react";
 
-export default function Hero({ colors }){
+
+export default function Hero({ colors, position = [0, 0, 0] }){
     return (
-        <group>
+        <group position={position}>
             {/* {head} */}
             <mesh position={[0, 2.5, 0]}>
                 <boxGeometry args={[1, 1, 1]}/>
@@ -14,23 +15,23 @@ export default function Hero({ colors }){
                 <meshPhongMaterial color={colors.body}/>
             </mesh>
             {/* {hand Right} */}
-            <mesh position={[0.75, 1.25, 0]}>
-                <boxGeometry args={[0.5, 1.5, 0.5]}/>
+            <mesh position={[0.30, 0.2, 0.30]}>
+                <boxGeometry args={[0.5, 0.7, 0.5]}/>
                 <meshPhongMaterial color={colors.hand}/>
             </mesh>
             {/* {hand Left} */}
-            <mesh position={[-0.75, 1.25, 0]}>
-                <boxGeometry args={[0.5, 1.5, 0.5]}/>
+            <mesh position={[-0.30, 0.2, 0.30]}>
+                <boxGeometry args={[0.5, 0.7, 0.5]}/>
                 <meshPhongMaterial color= {colors.hand}/>
             </mesh>
             {/* {Leg left} */}
-            <mesh position={[-0.25, 0, 0]}>
-                <boxGeometry args={[0.5, 1.25, 0.5]}/>
+            <mesh position={[-0.30, 0.2, -0.30]}>
+                <boxGeometry args={[0.5, 0.7, 0.5]}/>
                 <meshPhongMaterial color={colors.leg}/>
             </mesh>
             {/* {leg right} */}
-            <mesh position={[0.25, 0, 0]}>
-                <boxGeometry args={[0.5, 1.25, 0.5]}/>
+            <mesh position={[0.30, 0.2, -0.30]}>
+                <boxGeometry args={[0.5, 0.7, 0.50]}/>
                 <meshPhongMaterial color={colors.leg}/>
             </mesh>
 
